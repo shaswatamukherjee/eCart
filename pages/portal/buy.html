@@ -1,0 +1,39 @@
+<div ng-controller="buyController">
+    <div ng-repeat="img in images | productSearch" style="margin-bottom:20px;border: solid 1px #333333;padding: 20px;">
+        <div layout="row">
+            <div layout="column" flex="10" style="margin-right:20px;height: auto;">
+                <img ng-src="{{img.src}}" width="100%">
+            </div>
+            <div layout="column" flex>
+                <div layout="row">
+                    <div layout="column" flex align="left">{{img.title}}</div>
+                    <div layout="column" flex align="right">&euro;{{img.price}}</div>
+                </div>
+                <p></p>
+                <div layout="row">
+                    <div layout="column" flex layout-align="left"><p ng-bind-html="img.desc"></p></div>
+                    <div layout="column" flex="10" layout-align="right" class="btn btn-default" style="height:38px;" ng-click="addToCart($index)">Add to Cart</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <confirm name="Confirm" disable="disable"> </confirm>
+</div>
+<!--
+<div>
+            <div layout="column" flex="10" style="margin-right:20px;">
+                <img ng-src="{{images[$index].src}}" width="100%">
+            </div>
+            <div layout="column" flex>
+                <div layout="row">
+                    <div layout="column" flex align="left">{{images[$index].title}}</div>
+                    <div layout="column" flex align="right">&euro;{{images[$index].price}}</div>
+                </div>
+                <p></p>
+                <div layout="row">
+                    <div layout="column" flex layout-align="left"><p ng-bind-html="images[$index].desc"></p></div>
+                    <div layout="column" flex="10" layout-align="right" class="btn btn-default" style="height:38px;" ng-click="addToCart($index)">Add to Cart</div>
+                </div>
+            </div>
+        </div>
+-->

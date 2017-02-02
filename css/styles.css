@@ -1,0 +1,27 @@
+.mcf-page-header {
+    height:auto;
+    background-color:royalblue;
+    color: #ffffff;
+}
+
+.mcf-page-content {
+    height:auto;
+    width: 100%;
+    padding:20px;
+    text-align: left;
+    overflow: auto;
+}
+
+.mcf-page-sidenav {
+    background-color:cornsilk;
+    color: #333333;
+    padding:20px;
+    text-align: justify;
+}
+
+.ext-content {
+    padding: 50px;
+    margin: 20px;
+    background-color: #FFF2E0;
+}
+

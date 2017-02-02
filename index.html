@@ -1,0 +1,34 @@
+<html ng-app="eCartApp">
+    <head>
+        <link rel="stylesheet" href="lib/bootstrap.min.css"/>
+        <link rel="stylesheet" href="lib/angular-material.min.css"/>
+        <link rel="stylesheet" href="css/styles.css"/>
+
+        <script type="application/javascript" src="lib/angular.min.js"></script>
+        <script type="application/javascript" src="lib/angular-aria.min.js"></script>
+        <script type="application/javascript" src="lib/angular-animate.min.js"></script>
+        <script type="application/javascript" src="lib/angular-messages.min.js"></script>
+        <script type="application/javascript" src="lib/angular-material.min.js"></script>
+        <script type="application/javascript" src="lib/angular-route.min.js"></script>
+        <script type="application/javascript" src="lib/angular-modal-service.js"></script>
+        <script type="application/javascript" src="https://code.angularjs.org/1.6.0-rc.2/angular-sanitize.min.js"></script>
+        <script type="application/javascript" src="js/app.js"></script>
+
+    </head>
+    <body ng-cloak>
+        <div layout="row" layout-align="center" class="mcf-page-header">
+            <h3>eCart - Your online market</h3>
+        </div>
+        <div layout="row" class="mcf-page-content" ng-controller="homeController" ng-cloak>
+            <md-content flex class="md-padding">
+                <input type="text" class="form-control" ng-model="$parent.searchedText">
+                <md-nav-bar md-selected-nav-item="currentNavItem" nav-bar-aria-label="navigation links">
+                    <md-nav-item md-nav-click="goto('buy')" name="buy">Buy</md-nav-item>
+                    <md-nav-item md-nav-click="goto('sell')" name="sell">Sell</md-nav-item>
+                    <!--<md-nav-item md-nav-click="goto('account')" name="account">My Account</md-nav-item>-->
+                </md-nav-bar>
+                <div class="ext-content" ng-view></div>
+            </md-content>
+        </div>
+    </body>
+</html>

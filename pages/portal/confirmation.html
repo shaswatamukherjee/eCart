@@ -1,0 +1,27 @@
+<header class="page-header"><h3>Order confirmation</h3></header>
+<div>
+    <h4>Your order is being processed</h4>
+    <div>Product</div>
+    <div ng-bind="$parent.itemSelected.title"></div>
+    <p></p>
+    <div>Price</div>
+    <div ng-bind="$parent.itemSelected.price"></div>
+    <p></p>
+    <h4>Delivery Details</h4>
+    <div>Name</div>
+    <div ng-bind="$parent.itemSelected.address.name"></div>
+    <p></p>
+    <div>Address</div>
+    <div>{{$parent.itemSelected.address.place + ', ' + $parent.itemSelected.address.city + ', ' + $parent.itemSelected.address.state + ', ' + $parent.itemSelected.address.zip + ', ' + $parent.itemSelected.address.country}}</div>
+    <p></p>
+    <h4>Payment Details</h4>
+    <div>Card Type</div>
+    <div ng-bind="$parent.itemSelected.payment.creditcardType"></div>
+    <p></p>
+    <div>Card Holder Name</div>
+    <div ng-bind="$parent.itemSelected.payment.name"></div>
+    <p></p>
+    <div>Card Number</div>
+    <div >{{'************' + $parent.itemSelected.address.cardnumber.substring(12)}}</div>
+    <p></p>
+</div>

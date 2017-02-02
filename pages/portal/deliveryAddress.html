@@ -1,0 +1,26 @@
+<header class="page-header">Delivery Address</header>
+<div>
+    <h4>Delivery and Billing Address</h4>
+    <div>Name</div>
+    <input type="text" placeholder="full name" ng-model="$parent.itemSelected.address.name">
+    <p></p>
+    <div>Place</div>
+    <input type="text" placeholder="street housenr" ng-model="$parent.itemSelected.address.place">
+    <p></p>
+    <div>City</div>
+    <input type="text" placeholder="city" ng-model="$parent.itemSelected.address.city">
+    <p></p>
+    <div>State/Province</div>
+    <input type="text" placeholder="province" ng-model="$parent.itemSelected.address.state">
+    <p></p>
+    <div>Country</div>
+    <input type="text" placeholder="country" ng-model="$parent.itemSelected.address.country">
+    <p></p>
+    <div>Zip Code</div>
+    <input type="text" placeholder="zip" ng-model="$parent.itemSelected.address.zip">
+    <p></p>
+    <br>
+    <br>
+    <p></p>
+    <div class="btn btn-success" ng-click="proceedToPay()">Proceed to payment</div>
+</div>

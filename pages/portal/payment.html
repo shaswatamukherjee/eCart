@@ -1,0 +1,29 @@
+<header class="page-header">Credit Card</header>
+<div>
+    <h4>Enter your creditcard details</h4>
+    <div>Card Type</div>
+    <select name="creditcardType" id="creditcardType" ng-model="payment.creditcardType">
+        <option ng-repeat="opt in creditcardTypes" value="{{opt}}" ng-bind="opt"></option>
+    </select>
+    <p></p>
+    <div>Card Number</div>
+    <input type="text" size="20" placeholder="16 digit card number" ng-model="payment.cardnumber">
+    <p></p>
+    <div>Name on card</div>
+    <input type="text" ng-model="payment.name">
+    <p></p>
+    <div>Expiry Date</div>
+    <select name="month" id="creditcardMonth" ng-model="payment.expiryDate.month" placeholder="MM">
+        <option ng-repeat="opt in months" value="{{opt}}" ng-bind="opt"></option>
+    </select>
+    <select name="year" id="creditcardYear" ng-model="payment.expiryDate.year" placeholder="YYYY">
+        <option ng-repeat="opt in years" value="{{opt}}" ng-bind="opt"></option>
+    </select>
+    <p></p>
+    <div>CVV</div>
+    <input type="password" ng-model="payment.cvv">
+    <br>
+    <br>
+    <p></p>
+    <div class="btn btn-success" ng-click="pay()">Pay Now</div>
+</div>
